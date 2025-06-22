@@ -65,9 +65,9 @@
 
   <script>
     const images = [
-      "https://i.imgur.com/UQ5Tx9N.jpg", // Beispiel-RP-Bild 1
-      "https://i.imgur.com/B37KuHs.jpg", // Beispiel-RP-Bild 2
-      "https://i.imgur.com/0yJ38ZV.jpg"  // Beispiel-RP-Bild 3
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/ss_f8a05c7f877d376f19d314808a4e3df9b8a5075e.1920x1080.jpg",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/ss_c2e0f6b5bb88ceec6b6f27debe4db93e4edc08df.1920x1080.jpg",
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/4000/ss_bba250a14d39e6f5042484e2d54c5b1a6d8d7c96.1920x1080.jpg"
     ];
 
     let index = 0;
@@ -78,8 +78,8 @@
       index = (index + 1) % images.length;
     }
 
-    changeBackground(); // Initial
-    setInterval(changeBackground, 5000); // Alle 5 Sekunden
+    changeBackground();
+    setInterval(changeBackground, 5000);
   </script>
 
 </body>
