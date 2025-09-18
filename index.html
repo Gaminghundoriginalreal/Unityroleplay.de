@@ -8,40 +8,90 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
       height: 100%;
-      font-family: sans-serif;
+      font-family: "Segoe UI", Roboto, sans-serif;
       color: #e0e0ff;
       overflow: hidden;
+      background: #000014;
     }
 
+    /* Hintergrund mit Animation */
     .background {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
       background-size: cover;
       background-position: center;
+      filter: brightness(0.7) blur(2px);
       transition: background-image 1s ease-in-out;
       z-index: -1;
     }
 
     header {
-      background-color: rgba(0, 0, 50, 0.8);
-      padding: 1rem;
+      background: rgba(0, 0, 50, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 1.5rem;
       text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #7fcfff;
+      text-shadow: 0 0 15px rgba(127,207,255,0.7);
+      margin-bottom: 0.5rem;
     }
 
     nav a {
-      color: #7fcfff;
+      color: #e0e0ff;
       margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 1.1rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #7fcfff;
+      transition: width 0.3s;
+      margin: 0 auto;
+    }
+
+    nav a:hover {
+      color: #7fcfff;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     main {
-      background-color: rgba(0, 0, 0, 0.6);
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 2rem;
-      border-radius: 10px;
+      background: rgba(0, 0, 30, 0.6);
+      backdrop-filter: blur(12px);
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #7fcfff;
+      text-shadow: 0 0 10px rgba(127,207,255,0.5);
+    }
+
+    main p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #f0f0ff;
     }
   </style>
 </head>
@@ -54,20 +104,21 @@
     <nav>
       <a href="/">Home</a>
       <a href="/forum">Forum</a>
-      <a href="https://discord.gg/AWGZanKvvU">Discord</a>
+      <a href="https://discord.gg/AWGZanKvvU" target="_blank">Discord</a>
     </nav>
   </header>
 
   <main>
     <h2>Willkommen auf Unity Roleplay</h2>
-    <p>Dein realistischer RP‑Server in GMod. Professionell. Immersiv. Einzigartig.</p>
+    <p>Dein realistischer RP-Server in GMod.<br>
+       Professionell. Immersiv. Einzigartig.</p>
   </main>
 
   <script>
     const images = [
       "https://unityroleplay.de/2.png",
       "https://unityroleplay.de/3.png",
-      "https://unityroleplay.de/4.png"
+      "https://unityroleplay.de/4.png",
       "https://unityroleplay.de/1.png"
     ];
 
