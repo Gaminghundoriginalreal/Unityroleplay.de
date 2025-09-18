@@ -14,7 +14,7 @@
       background: #000014;
     }
 
-    /* Hintergrund mit Animation */
+    /* Hintergrund mit Blur + Fade */
     .background {
       position: fixed;
       top: 0; left: 0;
@@ -115,18 +115,21 @@
   </main>
 
   <script>
+    // Testbilder von Unsplash (funktionieren garantiert)
     const images = [
-      "https://unityroleplay.de/2.png",
-      "https://unityroleplay.de/3.png",
-      "https://unityroleplay.de/4.png",
-      "https://unityroleplay.de/1.png"
+      "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1600&q=80"
     ];
 
     let index = 0;
     const bg = document.getElementById('background');
 
     function changeBackground() {
-      bg.style.backgroundImage = `url(${images[index]})`;
+      const url = images[index];
+      console.log("Lade Hintergrund:", url); // Debug ins Browser-Log
+      bg.style.backgroundImage = `url(${url})`;
       index = (index + 1) % images.length;
     }
 
